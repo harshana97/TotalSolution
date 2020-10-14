@@ -10,15 +10,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+    @include('navbar')
+    <br>
 </head>
 <body>
-    
-<div class="content">
 
+
+  {{-- <h1>New Inquiry</h1> --}}
+  <h1 class="d-flex justify-content-center display-4">New Inquiry</h1>
+
+<br>
+<div class="content">
 <div class="container">
 <div class="text-center">
-<h1>New Inquiry</h1>
 <div class="row">
 <div class="col-md-12">
 
@@ -32,7 +36,7 @@
       <input type="text" id="myInput" class="form-control" name="getCustomer"  placeholder="Type here " required>
     
     </div>
-  </div>
+  </div>  
 
   <!-- <button id="toggleVisibilityButton" onclick="viewCustomer()" type="submit" class="btn btn-warning">Enter</button> -->
   
@@ -180,10 +184,9 @@
 <input type="submit" class="btn btn-warning" value="Add">
 
 
-
-
-
 </form>
+
+<br>
 
 <!-- @if (Session::has('message'))
    <div class="alert alert-info">{{ Session::get('message') }}</div>
