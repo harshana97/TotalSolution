@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inqiry</title>
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    @include('navbar')
 </head>
+
 <body>
 
     <header>
         @include('navbar')
     </header>
 
+    <br>
+
     <div class="container">
         <div class="text-center">
-
-            <div class="row">
-                <div class="col-md-12">
-
+            <div class="row" style=" display: flex;   flex-wrap: wrap;
+            margin-right: -100px;
+            margin-left: -100px;">
+                <div class="col-lg-12">
                     <div class="content">
-
-
+                        <h1 class="d-flex justify-content-center" style="padding-top: 20px; padding-bottom: 40px;">
+                            Inquiry List</h1>
                         <!-- Search form -->
-                        <input class="form-control col-12" type="text" placeholder="Search" aria-label="Search"
+                        <input class="form-control col-lg-12" type="text" placeholder="Search" aria-label="Search"
                             id="myInput" onkeyup="myFunction()">
+
+                        <br>
+
 
                         <a href="/addInqu" class="btn btn-primary">Add new</a>
 
 
-                        <div class="tab">
+                        <br>
+
+                        <div class="tab" style="padding-top: 20px">
                             <button class="btn btn-info" data-toggle="button" aria-pressed="false"
                                 onclick="openCity(event, 't1')" id="defaultOpen">Active</button>
                             <button class="btn btn-info" data-toggle="button" aria-pressed="false"
@@ -43,19 +50,15 @@
                             <button class="btn btn-info" data-toggle="button" aria-pressed="false"
                                 onclick="openCity(event, 't4')">Expired</button>
                         </div>
-
                         <br>
                         <!-- Tab content -->
                         <div id="t1" class="tabcontent" style="display:block">
-
                             <table class="table table-dark" data-name="mytable" id="myTable1">
-
                                 <th onclick="sortTable('myTable1',0)">Inquiry Title</th>
                                 <th onclick="sortTable('myTable1',1)">inquiry No</th>
                                 <th onclick="sortTable('myTable1',2)">Submit Date</th>
                                 <th onclick="sortTable('myTable1',3)">Cloasing Date</th>
                                 <th>Change Status</th>
-
 
                                 @foreach ($inqu as $inqu1)
                                     @if ($inqu1->status == 'Active')

@@ -15,16 +15,13 @@
 </head>
 <body>
 
-
-  {{-- <h1>New Inquiry</h1> --}}
-  <h1 class="d-flex justify-content-center display-4">New Inquiry</h1>
-
-<br>
 <div class="content">
+  <h1 class="d-flex justify-content-center" style="padding-top: 20px; padding-bottom: 40px;">
+    New Inquiry</h1>
 <div class="container">
 <div class="text-center">
 <div class="row">
-<div class="col-md-12">
+<div class="col-lg-12">
 
 <form method="get" action="/viewCus" autocomplete="off" >
 {{csrf_field()}}
@@ -40,12 +37,11 @@
 
   <!-- <button id="toggleVisibilityButton" onclick="viewCustomer()" type="submit" class="btn btn-warning">Enter</button> -->
   
-    <input id="toggleVisibilityButton" onclick="viewCustomer()" type="submit" class="btn btn-warning" value="Enter">
+    <input id="toggleVisibilityButton"   onclick="viewCustomer()" type="submit" class="btn btn-success" value="Enter">
 
 </form>
 
 <br>
-</br>
 <div id="displaytable" style="display:none">
 <table class="table table-borderless">
 @foreach($custo as $cus)
@@ -181,7 +177,7 @@
 
 </table>
 
-<input type="submit" class="btn btn-warning" value="Add">
+<input type="submit" class="btn btn-success" value="Add">
 
 
 </form>
